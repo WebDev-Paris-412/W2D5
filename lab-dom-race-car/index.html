@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="./styles/style.css" />
+		<title>Island Racer</title>
+	</head>
+	<body>
+		<main>
+			<!-- #game-intro is initially shown on the game start screen -->
+			<div id="game-intro">
+				<img src="./images/logo.png" alt="" class="logo-img" />
+				<br />
+				<button id="start-button">Start Game</button>
+				<p>Use the left and right arrow to control the car!</p>
+				<img src="./images/arrows.png" alt="" class="arrows-img" />
+			</div>
+
+			<!-- <style>
+				.container {
+					position: relative;
+					height: 100px;
+					background-color: gray;
+				}
+				.cube {
+					position: absolute;
+					background-color: red;
+					height: 50px;
+					width: 50px;
+					top: 0;
+					left: 0;
+				}
+			</style>
+
+			<div class="container">
+				<div class="cube"></div>
+			</div>
+			<script>
+				const cube = document.querySelector(".cube")
+				let x = 50,
+					y = 10
+				cube.style.top = y + "px"
+				cube.style.left = x + "px"
+				const pressedKeys = {
+					up: false,
+					down: false,
+					right: false,
+					left: false,
+				}
+
+				setInterval(() => {
+					for (const key in pressedKeys) {
+						if (pressedKeys[key]) {
+							move(key)
+						}
+					}
+				}, 1000 / 60)
+
+				function move(direction) {
+					switch (direction) {
+						case "up":
+							y--
+							break
+						case "down":
+							y++
+							break
+						case "left":
+							x--
+							break
+						case "right":
+							x++
+							break
+					}
+					cube.style.left = x + "px"
+					cube.style.top = y + "px"
+				}
+
+				document.addEventListener("keyup", (e) => {
+					switch (e.key) {
+						case "ArrowUp":
+							pressedKeys["up"] = false
+							break
+						case "ArrowDown":
+							pressedKeys["down"] = false
+							break
+						case "ArrowLeft":
+							pressedKeys["left"] = false
+							break
+						case "ArrowRight":
+							pressedKeys["right"] = false
+							break
+					}
+				})
+				document.addEventListener("keydown", (e) => {
+					switch (e.key) {
+						case "ArrowUp":
+							pressedKeys["up"] = true
+							break
+						case "ArrowDown":
+							pressedKeys["down"] = true
+							break
+						case "ArrowLeft":
+							pressedKeys["left"] = true
+							break
+						case "ArrowRight":
+							pressedKeys["right"] = true
+							break
+					}
+
+					console.log(pressedKeys)
+					// switch (e.key) {
+					// 	case "ArrowUp":
+					// 		x -= 3
+					// 		cube.style.top = x + "px"
+					// 		break
+					// 	case "ArrowDown":
+					// 		x += 3
+					// 		cube.style.top = x + "px"
+					// 		break
+					// 	case "ArrowLeft":
+					// 		y -= 3
+					// 		cube.style.left = y + "px"
+					// 		break
+					// 	case "ArrowRight":
+					// 		y += 3
+					// 		cube.style.left = y + "px"
+					// 		break
+					// }
+				})
+			</script> -->
+			<div id="game-container">
+				<div>
+					<h2>Stats</h2>
+					<p>Score: <span id="score">0</span></p>
+					<p>Lives: <span id="lives">3</span></p>
+				</div>
+				<!-- #game-screen is initially hidden using CSS style display: none -->
+				<div id="game-screen" class="hidden"></div>
+			</div>
+
+			<!-- #game-end is initially hidden using CSS style display: none -->
+			<div id="game-end" class="hidden">
+				<img src="./images/logo.png" alt="" class="logo-img" />
+				<h1>Game Over</h1>
+				<br />
+				<button id="restart-button">Restart</button>
+			</div>
+		</main>
+
+		<script type="text/javascript" src="js/obstacle.js"></script>
+		<script type="text/javascript" src="js/car.js"></script>
+		<script type="text/javascript" src="js/game.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>
