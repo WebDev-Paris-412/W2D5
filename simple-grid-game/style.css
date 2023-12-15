@@ -1,0 +1,38 @@
+*:not(dialog) {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: sans-serif;
+}
+
+.hidden {
+	display: none;
+}
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.cell {
+	height: 50px;
+	width: 50px;
+	border: 1px solid black;
+	background-color: rgb(184, 182, 182);
+}
+
+.coin {
+	background-color: gold;
+}
+.player {
+	background-color: blue;
+}
+
+dialog::backdrop {
+	backdrop-filter: blur(4px) brightness(0.6);
+}
